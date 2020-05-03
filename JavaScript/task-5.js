@@ -1,9 +1,16 @@
 const checkForSpam = function (message) {
-    arrayedMessage = message.toLowerCase();
-    arrayedMessage = arrayedMessage.split(" ")
-    return arrayedMessage.includes("sale" || "spam");
+    message = message.toLowerCase();
+    message = message.replace(/[^a-zA-Z ]/g, "")
+    arrayedMessage = message.split(" ")
+    if (arrayedMessage.includes("spam") || arrayedMessage.includes("sale")) {
+        return true
+    } else {
+        return false
+    }
 
 };
+
+
 
 
 console.log(checkForSpam('Latest technology news')); // false
