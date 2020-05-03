@@ -1,14 +1,12 @@
 const formatString = function (string) {
-    let quote
     if (string.length <= 40) {
-        return quote = string
-    } else {
-        string = string.split("")
-        string.splice(40 - 1, string.length, '...')
-        string = string.join('')
-        return quote = string
+        return string;
+    } else if (string.length > 40) {
+        shortenedString = string.slice(0, 40);
+        shortenedString = shortenedString.concat("...");
+        return shortenedString;
     }
-    console.log(quote)
+
 };
 
 
