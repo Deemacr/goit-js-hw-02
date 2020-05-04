@@ -10,17 +10,21 @@ while (true) {
     }
 
     input = Number(input);
-    const isNumber = Number.isNaN(input)
+    const isNumber = Number.isNaN(input);
 
     if (isNumber) {
-        alert('It is not a number, try again')
-        continue
+        alert('It is not a number, try again');
+        continue;
     }
-    numbers.push(input)
+    numbers.push(input);
 }
 
-for (let i = 0; i < numbers.length; i++) {
-    total = total + numbers[i]
+if (numbers.length == 0) {
+    alert('There is no numbers in array');
+} else {
+    for (let i = 0; i < numbers.length; i++) {
+        total = total + numbers[i];
+    }
+    alert(`Total sum is ${total}`);
 }
-console.log(numbers)
-alert(`Total sum is ${total}`);
+console.log(numbers);
